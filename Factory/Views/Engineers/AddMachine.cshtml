@@ -10,16 +10,20 @@
   </div>
 </div>
 
-<h4>@Html.DisplayFor(model => model.Name)</h4>
+<div class="card">
+  <div class="card-body">
+      <h4>@Html.DisplayFor(model => model.Name)</h4>
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
-  <p>Please select a machine that you would like to add.</p>
-  @Html.Label("Select machine")
-  @Html.DropDownList("MachineId")
+      @using (Html.BeginForm())
+      {
+        @Html.HiddenFor(model => model.EngineerId)
+        <p>Please select a machine that you would like to add.</p>
+        @Html.Label("Select machine")
+        @Html.DropDownList("MachineId")
 
-  <input type="submit" value="Save" />
-}
+        <input type="submit" value="Save" />
+      }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+      <p>@Html.ActionLink("Back to list", "Index")</p>
+  </div>
+</div>

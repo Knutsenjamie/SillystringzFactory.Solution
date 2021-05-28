@@ -10,9 +10,13 @@
     </div>
 </div>
 
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-@using (Html.BeginForm())
-{
-  <input type="submit" value="Delete" />
-}
-@Html.ActionLink("Back to List", "Index")
+<div class="card">
+    <div class="card-body">
+        @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+        @using (Html.BeginForm())
+        {
+        <input type="submit" value="Delete" />
+        }
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

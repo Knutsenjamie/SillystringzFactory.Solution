@@ -10,15 +10,19 @@
   </div>
 </div>
 
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text", required="required"})
+<div class="card">
+  <div class="card-body">
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(model => model.Name)
+      @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text", required="required"})
 
-  @Html.Label("Select a machine for this engineer")
-  @Html.DropDownList("MachineId")
+      @Html.Label("Select a machine for this engineer")
+      @Html.DropDownList("MachineId")
 
-  <br>
-  <input type="submit" value="Add a new engineer" class="btn btn-warning" />
-}
-<p>@Html.ActionLink("Show all engineers", "Index")</p>
+      <br>
+      <input type="submit" value="Add a new engineer" class="btn btn-warning" />
+    }
+    <p>@Html.ActionLink("Show all engineers", "Index")</p>
+  </div>
+</div>

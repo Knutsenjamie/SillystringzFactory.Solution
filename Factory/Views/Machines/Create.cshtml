@@ -9,14 +9,18 @@
   </div>
 </div>
 
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text", required="required"})
+<div class="card">
+  <div class="card-body">
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(model => model.Name)
+      @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text", required="required"})
 
-  @Html.LabelFor(model => model.LicenseNumber)
-  @Html.TextBoxFor(model => model.LicenseNumber, new {@class = "form-control", type="number", required="required"})
+      @Html.LabelFor(model => model.LicenseNumber)
+      @Html.TextBoxFor(model => model.LicenseNumber, new {@class = "form-control", type="number", required="required"})
 
-  <input type="submit" class="btn btn-success mt-5" value="Add new machine" />
-}
-<p>@Html.ActionLink("Show all of our machines", "Index")</p>
+      <input type="submit" class="btn btn-success mt-5" value="Add new machine" />
+    }
+    <p>@Html.ActionLink("Show all of our machines", "Index")</p>
+  </div>
+</div>
