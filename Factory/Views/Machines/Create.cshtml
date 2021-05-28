@@ -3,7 +3,12 @@
 }
 @model Factory.Models.Machine
 
-<h4>Add a new Machine</h4>
+<div class="container">
+  <div class="jumbotron">
+    <h4>Add a new Machine</h4>
+  </div>
+</div>
+
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
