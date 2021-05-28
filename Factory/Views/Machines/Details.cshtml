@@ -27,9 +27,13 @@ else
 {
   <h4>Engineers assigned</h4>
   <ul>
-    @foreach (var join in Model.JoinEntities)
+  @foreach (var join in Model.JoinEntities)
     {
-      <li>@Html.ActionLink($"{@join.Engineer.Name}", "Details", "Engineers", new {id = join.Engineer.EngineerId})</li>
+      <li>@Html.ActionLink($"{@join.Engineer.Name}", "Details", "Engineers", new {id = join.Engineer.EngineerId}) | @using (Html.BeginForm("DeleteMachine", "Engineers"))
+      {
+        @Html.Hidden("joinId", @join.MachineEngineerId)
+        <input type="submit" value="unassign from machine" />
+      }</li>
     }
   </ul>
 }
