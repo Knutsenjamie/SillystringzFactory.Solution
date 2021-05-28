@@ -16,7 +16,7 @@ namespace Factory.Models
     [Required]
     public string Name { get; set; }
     [Required]
-    public int LiscenseNumber { get; set; }
+    public int LicenseNumber { get; set; }
     public virtual ICollection<MachineEngineer> JoinEntities { get; set; }
   }
 }
